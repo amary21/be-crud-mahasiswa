@@ -19,15 +19,18 @@ class M_mahasiswa extends CI_Model
     public function insert($data)
     {
         $this->db->insert($this->table, $data);
+        return ($this->db->affected_rows() != 1) ? false : true;
     }
 
     public function update($data, $id)
     {
         $this->db->where('id_mahasiswa', $id)->update($this->table, $data);
+        return ($this->db->affected_rows() != 1) ? false : true;
     }
 
     public function delete($id)
     {
         $this->db->where('id_mahasiswa', $id)->delete($this->table);
+        return ($this->db->affected_rows() != 1) ? false : true;
     }
 }
