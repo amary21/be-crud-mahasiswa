@@ -28,7 +28,7 @@ class Add extends RestController
             $response['error'] = true;
             $response['message'] = 'failed add data mahasiswa';
 
-            $this->response($response, 502);
+            $this->response($response, RestController::HTTP_BAD_REQUEST);
         }
     }
 }

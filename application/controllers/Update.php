@@ -29,7 +29,7 @@ class Update extends RestController
             $response['error'] = true;
             $response['message'] = 'failed update data mahasiswa';
 
-            $this->response($response, 502);
+            $this->response($response, RestController::HTTP_BAD_REQUEST);
         }
     }
 }

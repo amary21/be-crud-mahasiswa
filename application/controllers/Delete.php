@@ -20,7 +20,7 @@ class Delete extends RestController
             $response['error'] = true;
             $response['message'] = 'failed delete data mahasiswa';
 
-            $this->response($response, 502);
+            $this->response($response, RestController::HTTP_BAD_REQUEST);
         }
     }
 }
